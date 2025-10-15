@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Turmas</title>
+    <link rel="stylesheet" href="../styles/home.css">
+</head>
+<body>
+    <header class="topbar">
+        <span id="turma-logada">Painel de Turmas</span>
+        <button id="logout" class="logout">Sair</button>
+    </header>
+
+    <main class="container">
+        <div class="actions">
+            <button id="btn-cadastrar" class="btn-cadastrar">Cadastrar turma</button>
+            <button id="btn-visualizar">Visualizar turmas</button>
+            <button id="btn-limpar">Excluir todas</button>
+        </div>
+
+        <section id="form-section" style="display:none;">
+            <h2>Nova Turma</h2>
+            <form id="form-turma">
+                <input type="text" id="nome" placeholder="Nome da Turma" required>
+                <input type="text" id="serie" placeholder="Série" required>
+                <input type="text" id="turno" placeholder="Turno" required>
+                <div class="form-buttons">
+                    <button type="submit" class="btn-salvar">Salvar</button>
+                    <button type="button" id="cancelar" class="btn-cancelar">Cancelar</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="area-lista" style="display:none;">
+            <h2>Turmas Cadastradas</h2>
+            <table id="tabela-turmas">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Série</th>
+                        <th>Turno</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <section id="atividades-section" style="display:none;">
+            <div class="atividades-header">
+                <h2>Atividades da Turma: <span id="turma-selecionada"></span></h2>
+                <button id="voltar-turmas" class="btn-voltar">Voltar para Turmas</button>
+            </div>
+            
+            <div class="actions">
+                <button id="btn-nova-atividade" class="btn-cadastrar">Nova Atividade</button>
+            </div>
+
+            <form id="form-atividade" style="display:none;">
+                <input type="text" id="titulo-atividade" placeholder="Título da Atividade" required>
+                <textarea id="descricao-atividade" placeholder="Descrição da Atividade" required></textarea>
+                <input type="date" id="data-entrega" required>
+                <div class="form-buttons">
+                    <button type="submit" class="btn-salvar">Salvar Atividade</button>
+                    <button type="button" id="cancelar-atividade" class="btn-cancelar">Cancelar</button>
+                </div>
+            </form>
+
+            <table id="tabela-atividades" style="display:none;">
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Descrição</th>
+                        <th>Data de Entrega</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="../script/home.js"></script>
+</body>
+</html>

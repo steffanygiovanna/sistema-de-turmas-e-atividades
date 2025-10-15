@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades</title>
+    <link rel="stylesheet" href="../styles/home.css">
+</head>
+<body>
+    <header class="topbar">
+        <span id="turma-logada">Painel de Atividades</span>
+        <button id="voltar" class="logout">Voltar</button>
+    </header>
+
+    <main class="container">
+        <div class="actions">
+            <button id="btn-cadastrar-atividade" class="btn-cadastrar">Cadastrar atividade</button>
+            <button id="btn-visualizar-atividades">Visualizar atividades</button>
+        </div>
+
+        <section id="form-section" style="display:none;">
+            <h2>Nova Atividade</h2>
+            <form id="form-atividade">
+                <select id="turma" required>
+                    <option value="">Selecione a turma</option>
+                </select>
+                <input type="text" id="titulo" placeholder="Título da Atividade" required>
+                <textarea id="descricao" placeholder="Descrição da Atividade" required></textarea>
+                <input type="date" id="data-entrega" required>
+                <div class="form-buttons">
+                    <button type="submit" class="btn-salvar">Salvar</button>
+                    <button type="button" id="cancelar" class="btn-cancelar">Cancelar</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="area-lista" style="display:none;">
+            <h2>Atividades Cadastradas</h2>
+            <table id="tabela-atividades">
+                <thead>
+                    <tr>
+                        <th>Turma</th>
+                        <th>Título</th>
+                        <th>Descrição</th>
+                        <th>Data de Entrega</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="../script/atividades.js"></script>
+</body>
+</html>
