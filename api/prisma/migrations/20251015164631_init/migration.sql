@@ -24,8 +24,6 @@ CREATE TABLE `Login` (
 CREATE TABLE `Turmas` (
     `turma_id` INTEGER NOT NULL AUTO_INCREMENT,
     `nome` VARCHAR(191) NOT NULL,
-    `telefone` VARCHAR(191) NULL,
-    `cpf` VARCHAR(191) NULL,
 
     PRIMARY KEY (`turma_id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;

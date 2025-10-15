@@ -36,8 +36,6 @@ model Login {
 model Turmas {
   turma_id Int     @id @default(autoincrement())
   nome     String
-  telefone String?
-  cpf      String?
 
   
   atividades Atividades[]
